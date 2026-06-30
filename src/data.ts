@@ -1,4 +1,9 @@
 import { WeddingEvent } from "./types";
+import haldiImg from "./assets/images/haldi_illustration_1782213082788.jpg";
+import janvasamImg from "./assets/images/janvasam_vector_1782217158160.jpg";
+import sangeetImg from "./assets/images/sangeet_illustration_1782213098674.jpg";
+import kalyanamImg from "./assets/images/kalyanam_illustration_1782213114192.jpg";
+import receptionImg from "./assets/images/reception_vector_1782217191724.jpg";
 
 export const BRIDE_NAME = "Shriya";
 export const GROOM_NAME = "Subramanian";
@@ -15,7 +20,7 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
     venue: "Poolside Lawn, Muhurat Resort",
     description: "Apply turmeric all over the Bride and Groom, for 'purification' of course. Jump into the pool afterwards for extra effect!",
     themeColor: "from-amber-100 via-amber-200/40 to-yellow-50",
-    image: "/src/assets/images/haldi_illustration_1782213082788.jpg",
+    image: haldiImg,
     details: [
       "Turmeric Paste Application",
       "Marigold Petals Shower",
@@ -34,7 +39,7 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
     venue: "Resort Entrance & Central Courtyard, Muhurat Resort",
     description: "Welcome the Groom and his family as they arrives in a grand manner, followed by another mini engagement, because twice is always nice",
     themeColor: "from-wedding-crimson/5 via-wedding-peach/25 to-wedding-plum/5",
-    image: "/src/assets/images/janvasam_vector_1782217158160.jpg",
+    image: janvasamImg,
     details: [
       "Janavasam: Traditional Vintage Car Procession & Dhol Beats (3:30 PM)",
       "Engagement: Ring Exchange & Family Promises Ceremony (5:00 PM)",
@@ -52,7 +57,7 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
     venue: "Royal Grand Ballroom, Muhurat Resort",
     description: "Get ready to dance, dance, and dance. Show off your coordination (or lack of) and let yourself loose to make room for the dinner afterwards",
     themeColor: "from-wedding-plum via-indigo-950/70 to-wedding-plum",
-    image: "/src/assets/images/sangeet_illustration_1782213098674.jpg",
+    image: sangeetImg,
     details: [
       "Family Dance Performances",
       "Live DJ & Dashing Dance Floor",
@@ -71,14 +76,14 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
     venue: "Main Temple Mandap, Muhurat Resort",
     description: "A traditional Tamil wedding, to unite the Bride and Groom. No take backs after this",
     themeColor: "from-wedding-crimson via-orange-950/70 to-wedding-crimson",
-    image: "/src/assets/images/kalyanam_illustration_1782213114192.jpg",
+    image: kalyanamImg,
     details: [
       "Kasi Yaatra: The traditional mock-pilgrimage where the groom is humorously stopped and persuaded to choose marriage life.",
       "Oonjal (Swing Ceremony): The couple sits on a decorated floral swing while ladies sing traditional songs and sway them gently to ward off negative vibes.",
       "Tying of the Sacred Mangalsutra (Mangalyam Dharnam)",
       "Saptapadi: Seven steps around the holy fire marking the marital vows",
       "Traditional South Indian feast served on fresh banana leaves",
-      "Tap to ring the wedding temple bells!"
+      "Tap to ring the wedding temple bells!",
     ],
     dressTheme: "Your Best Authentic Traditional Attire",
     iconName: "Heart",
@@ -92,7 +97,7 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
     venue: "Resort Palace Lawns, Muhurat Resort",
     description: "Come dressed your sharpest best, take photos, and wish the Bride and Groom a (very) happy future together",
     themeColor: "from-wedding-plum via-purple-950/80 to-wedding-plum",
-    image: "/src/assets/images/reception_vector_1782217191724.jpg",
+    image: receptionImg,
     details: [
       "Greeting the Newlywed Couple",
       "Live Orchestral Melodies",

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Heart } from "lucide-react";
+import sealImg from "../assets/images/seal.png";
 
 interface EnvelopeProps {
   onOpen: () => void;
@@ -193,7 +194,7 @@ export default function Envelope(props: EnvelopeProps) {
       }}
     >
       <img 
-        src="/src/assets/images/seal.png" 
+        src={sealImg} 
         alt="Shriya & Subramanian Monogram" 
         style={{ width: "100%", height: "100%" }} 
         className="absolute inset-0 m-auto object-contain opacity-100 pointer-events-none select-none transition-transform duration-300"
