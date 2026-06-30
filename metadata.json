@@ -1,0 +1,6 @@
+{
+  "name": "Shriya & Subramanian Wedding Invitation",
+  "description": "An elegant, animated digital invitation card and itinerary for the wedding celebration of Shriya and Subramanian, complete with rich animations, transitions, and event detail screens.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
