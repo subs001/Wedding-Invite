@@ -37,7 +37,7 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
     date: "August 30, 2026",
     time: "3:30 PM Onwards",
     venue: "Resort Entrance & Central Courtyard, Muhurat Resort",
-    description: "Welcome the Groom and his family as they arrives in a grand manner, followed by another mini engagement, because twice is always nice",
+    description: "Welcome the Groom and his family as they arrive in a grand manner, followed by another mini engagement, because twice is always nice",
     themeColor: "from-wedding-crimson/5 via-wedding-peach/25 to-wedding-plum/5",
     image: janvasamImg,
     details: [

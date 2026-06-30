@@ -372,7 +372,7 @@ export default function InvitationMain() {
       {/* Background and particles removed for a completely clean look */}
 
       {/* Primary Content Window */}
-      <main className="flex-1 flex flex-col max-w-4xl mx-auto w-full px-4 pt-6 pb-[10vh] md:pt-12 md:pb-[15vh] z-10 gap-[20vh] md:gap-16" id="main-ceremony-renderer">
+      <main className="flex-1 flex flex-col max-w-4xl mx-auto w-full px-4 pt-6 pb-[10vh] md:pt-12 md:pb-[15vh] z-10 gap-12 md:gap-16" id="main-ceremony-renderer">
         {/* Section 1: Welcome Cover / Invitation Card Overview */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -515,12 +515,12 @@ export default function InvitationMain() {
         </motion.div>
 
         {/* Section 2: Scrollable Itinerary list showing all events sequentially */}
-        <div className="w-full flex flex-col space-y-[20vh] md:space-y-12" id="itinerary-scrollable-container">
+        <div className="w-full flex flex-col space-y-12 md:space-y-12" id="itinerary-scrollable-container">
           
           {/* Day 1 - Aug 30th Card */}
           <ScrollLeftToRightSection
             id="ceremony-section-day1"
-            className={`bg-white border rounded-3xl overflow-hidden shadow-xl flex flex-col w-full min-h-[80vh] md:min-h-[500px] transition-[border-color,box-shadow] duration-500 scroll-mt-24 ${
+            className={`bg-white border rounded-3xl overflow-hidden shadow-xl flex flex-col w-full min-h-0 md:min-h-[500px] transition-[border-color,box-shadow] duration-500 scroll-mt-24 ${
               activeTab === 0 
                 ? "border-[#c5a059] ring-2 ring-[#c5a059]/20 shadow-2xl scale-[1.01]" 
                 : "border-[#c5a059]/20 opacity-95 shadow-md"
@@ -582,7 +582,7 @@ export default function InvitationMain() {
           {/* Day 2 - Aug 31st Card */}
           <ScrollLeftToRightSection
             id="ceremony-section-day2"
-            className={`bg-white border rounded-3xl overflow-hidden shadow-xl flex flex-col w-full min-h-[80vh] md:min-h-[500px] transition-[border-color,box-shadow] duration-500 scroll-mt-24 ${
+            className={`bg-white border rounded-3xl overflow-hidden shadow-xl flex flex-col w-full min-h-0 md:min-h-[500px] transition-[border-color,box-shadow] duration-500 scroll-mt-24 ${
               activeTab === 1 
                 ? "border-[#c5a059] ring-2 ring-[#c5a059]/20 shadow-2xl scale-[1.01]" 
                 : "border-[#c5a059]/20 opacity-95 shadow-md"
