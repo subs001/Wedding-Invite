@@ -196,7 +196,7 @@ export default function Envelope(props: EnvelopeProps) {
       <img 
         src={sealImg} 
         alt="Shriya & Subramanian Monogram" 
-        style={{ width: "100%", height: "100%" }} 
+        style={{ width: "120%", height: "120%" }} 
         className="absolute inset-0 m-auto object-contain opacity-100 pointer-events-none select-none transition-transform duration-300"
         referrerPolicy="no-referrer"
       />
