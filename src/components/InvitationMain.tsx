@@ -372,7 +372,7 @@ export default function InvitationMain() {
       {/* Background and particles removed for a completely clean look */}
 
       {/* Primary Content Window */}
-      <main className="flex-1 flex flex-col max-w-4xl mx-auto w-full px-4 pt-6 pb-[10vh] md:pt-12 md:pb-[15vh] z-10 gap-12 md:gap-16" id="main-ceremony-renderer">
+      <main className="flex-1 flex flex-col max-w-4xl mx-auto w-full px-4 pt-6 pb-[10vh] md:pt-12 md:pb-[15vh] z-10 gap-[15vh] md:gap-16" id="main-ceremony-renderer">
         {/* Section 1: Welcome Cover / Invitation Card Overview */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
