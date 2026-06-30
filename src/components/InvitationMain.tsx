@@ -12,6 +12,7 @@ import { WeddingEvent } from "../types";
 import { WeddingAudio } from "../utils/audio";
 import CountdownTimer from "./CountdownTimer";
 import goldKolamBg from "../assets/images/gold_kolam_bg_1782840826032.jpg";
+import maroonWeddingBg from "../assets/images/maroon_wedding_bg_1782844759694.jpg";
 
 const CALENDAR_URL_DAY1 = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Shriya+%26+Subramanian+Wedding+-+Day+1&dates=20260830T020000Z/20260830T183000Z&details=Haldi+Ceremony%2C+Janavasam%2C+Engagement%2C+and+Sangeet+Night.+Join+us+for+an+elegant+celebration%21&location=Muhurat+Resort%2C+Raipur%2C+Chhattisgarh";
 const CALENDAR_URL_DAY2 = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Shriya+%26+Subramanian+Wedding+-+Day+2&dates=20260831T030000Z/20260831T180000Z&details=Muhurtham+followed+by+the+Reception.+Join+us+for+blessings+and+celebration%21&location=Muhurat+Resort%2C+Raipur%2C+Chhattisgarh";
@@ -376,11 +377,11 @@ export default function InvitationMain() {
         style={{
           backgroundImage: `url(${goldKolamBg})`,
           backgroundRepeat: "repeat",
-          backgroundSize: "400px 400px",
+          backgroundSize: "150px 150px",
           backgroundPosition: "calc(50% + 3px) 20px",
           backgroundBlendMode: "multiply",
           backgroundColor: "#fcf9f4",
-          opacity: 0.5
+          opacity: 0.3
         }}
       />
       {/* Background and particles removed for a completely clean look */}
@@ -394,6 +395,12 @@ export default function InvitationMain() {
           transition={{ duration: 0.6 }}
           id="cover-card-view"
           className="bg-[#540b17] rounded-3xl py-8 px-4 sm:py-10 sm:px-6 md:py-12 md:px-8 text-center text-[#eae2ca] relative overflow-hidden shadow-xl flex flex-col items-center justify-between min-h-[75vh] md:min-h-[580px] max-h-[90vh]"
+          style={{
+            backgroundImage: `linear-gradient(rgba(84, 11, 23, 0.6), rgba(84, 11, 23, 0.6)), url('/src/assets/images/maroon.png')`,
+            backgroundSize: "100%",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat"
+          }}
         >
           {/* Inner Decorative Beige Border Inside the Section */}
           <div className="absolute inset-2 sm:inset-3 md:inset-4 border border-[#fcf9f4]/30 rounded-[20px] pointer-events-none z-10" />

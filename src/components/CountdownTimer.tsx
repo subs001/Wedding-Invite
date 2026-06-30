@@ -95,11 +95,11 @@ export default function CountdownTimer() {
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.3 }}
-      className="w-full max-w-md mx-auto my-6 p-5 rounded-2xl bg-[#40050d]/40 relative overflow-hidden shadow-xs"
+      className="w-full max-w-md mx-auto my-6 p-5 rounded-2xl relative overflow-hidden"
       id="countdown-timer-container"
     >
       {/* Decorative floral accent background or ambient glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(197,160,89,0.08)_0%,transparent_80%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(197,160,89,0.08)_0%,transparent_100%)] pointer-events-none" />
 
       <p className="text-center text-[10px] tracking-[0.25em] text-[#eae2ca]/80 font-sans font-bold uppercase mb-4">
         COUNTDOWN TO THE CELEBRATION
