@@ -11,6 +11,7 @@ import {
 import { WeddingEvent } from "../types";
 import { WeddingAudio } from "../utils/audio";
 import CountdownTimer from "./CountdownTimer";
+import goldKolamBg from "../assets/images/gold_kolam_bg_1782840826032.jpg";
 
 const CALENDAR_URL_DAY1 = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Shriya+%26+Subramanian+Wedding+-+Day+1&dates=20260830T020000Z/20260830T183000Z&details=Haldi+Ceremony%2C+Janavasam%2C+Engagement%2C+and+Sangeet+Night.+Join+us+for+an+elegant+celebration%21&location=Muhurat+Resort%2C+Raipur%2C+Chhattisgarh";
 const CALENDAR_URL_DAY2 = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Shriya+%26+Subramanian+Wedding+-+Day+2&dates=20260831T030000Z/20260831T180000Z&details=Muhurtham+followed+by+the+Reception.+Join+us+for+blessings+and+celebration%21&location=Muhurat+Resort%2C+Raipur%2C+Chhattisgarh";
@@ -369,6 +370,19 @@ export default function InvitationMain() {
       className="min-h-screen relative flex flex-col font-sans select-none overflow-x-hidden text-stone-800 bg-[#fcf9f4]"
       id="invitation-main-root"
     >
+      {/* Repeating Background Kolam Layer with 50% Opacity */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-0"
+        style={{
+          backgroundImage: `url(${goldKolamBg})`,
+          backgroundRepeat: "repeat",
+          backgroundSize: "400px 400px",
+          backgroundPosition: "calc(50% + 3px) 20px",
+          backgroundBlendMode: "multiply",
+          backgroundColor: "#fcf9f4",
+          opacity: 0.5
+        }}
+      />
       {/* Background and particles removed for a completely clean look */}
 
       {/* Primary Content Window */}
@@ -527,16 +541,16 @@ export default function InvitationMain() {
             }`}
           >
             {/* Day 1 Header */}
-            <div className="bg-gradient-to-r from-[#540b17] to-[#450711] text-[#eae2ca] py-5 px-6 md:px-8 flex flex-col items-center justify-center border-b border-[#c5a059]/30 relative text-center">
-              <div className="absolute inset-1 border border-[#eae2ca]/10 rounded-2xl pointer-events-none" />
-              <span className="font-sans text-[10px] tracking-[0.25em] font-extrabold text-[#f1d092] uppercase">Sunday</span>
-              <h3 className="font-serif text-lg md:text-xl font-bold tracking-wide">Day 1 — August 30, 2026</h3>
+            <div className="bg-gradient-to-r from-[#540b17] to-[#450711] text-[#eae2ca] py-5 px-6 md:px-8 flex flex-col items-center justify-center border-b border-[#c5a059]/30 relative text-center overflow-hidden">
+              <div className="absolute inset-1 border border-[#eae2ca]/10 rounded-2xl pointer-events-none z-10" />
+              <span className="font-sans text-[10px] tracking-[0.25em] font-extrabold text-[#f1d092] uppercase relative z-10">Sunday</span>
+              <h3 className="font-serif text-lg md:text-xl font-bold tracking-wide relative z-10">Day 1 — August 30, 2026</h3>
             </div>
 
             {/* Day 1 Events list */}
-            <div className="w-full p-6 md:p-10 flex flex-col justify-between text-stone-800 relative bg-white flex-1">
+            <div className="w-full p-6 md:p-10 flex flex-col justify-between text-stone-800 relative bg-white flex-1 overflow-hidden">
               {/* Vertical timeline of events with spacious padding for new custom icons */}
-              <div className="relative pl-10 md:pl-14 border-l border-[#c5a059]/30 flex flex-col gap-12 sm:gap-14">
+              <div className="relative z-10 pl-10 md:pl-14 border-l border-[#c5a059]/30 flex flex-col gap-12 sm:gap-14">
                 {day1Events.map((event) => (
                   <div key={event.id} className="relative group text-left">
                     {/* Golden custom icon indicator */}
@@ -589,16 +603,16 @@ export default function InvitationMain() {
             }`}
           >
             {/* Day 2 Header */}
-            <div className="bg-gradient-to-r from-[#540b17] to-[#450711] text-[#eae2ca] py-5 px-6 md:px-8 flex flex-col items-center justify-center border-b border-[#c5a059]/30 relative text-center">
-              <div className="absolute inset-1 border border-[#eae2ca]/10 rounded-2xl pointer-events-none" />
-              <span className="font-sans text-[10px] tracking-[0.25em] font-extrabold text-[#f1d092] uppercase">Monday</span>
-              <h3 className="font-serif text-lg md:text-xl font-bold tracking-wide">Day 2 — August 31, 2026</h3>
+            <div className="bg-gradient-to-r from-[#540b17] to-[#450711] text-[#eae2ca] py-5 px-6 md:px-8 flex flex-col items-center justify-center border-b border-[#c5a059]/30 relative text-center overflow-hidden">
+              <div className="absolute inset-1 border border-[#eae2ca]/10 rounded-2xl pointer-events-none z-10" />
+              <span className="font-sans text-[10px] tracking-[0.25em] font-extrabold text-[#f1d092] uppercase relative z-10">Monday</span>
+              <h3 className="font-serif text-lg md:text-xl font-bold tracking-wide relative z-10">Day 2 — August 31, 2026</h3>
             </div>
 
             {/* Day 2 Events list */}
-            <div className="w-full p-6 md:p-10 flex flex-col justify-between text-stone-800 relative bg-white flex-1">
+            <div className="w-full p-6 md:p-10 flex flex-col justify-between text-stone-800 relative bg-white flex-1 overflow-hidden">
               {/* Vertical timeline of events with spacious padding for new custom icons */}
-              <div className="relative pl-10 md:pl-14 border-l border-[#c5a059]/30 flex flex-col gap-12 sm:gap-14">
+              <div className="relative z-10 pl-10 md:pl-14 border-l border-[#c5a059]/30 flex flex-col gap-12 sm:gap-14">
                 {day2Events.map((event) => (
                   <div key={event.id} className="relative group text-left">
                     {/* Golden custom icon indicator */}
@@ -653,8 +667,8 @@ export default function InvitationMain() {
           id="rsvp-page-container"
         >
           {/* RSVP Form container */}
-          <div className="w-full p-6 md:p-10 flex flex-col justify-between text-stone-800 relative bg-white flex-1">
-            <div className="my-auto w-full">
+          <div className="w-full p-6 md:p-10 flex flex-col justify-between text-stone-800 relative bg-white flex-1 overflow-hidden">
+            <div className="my-auto w-full relative z-10">
               <div className="flex items-center justify-between border-b border-[#c5a059]/25 pb-4 mb-4 animate-none">
                 <div className="text-left">
                   <span className="font-serif text-[10px] tracking-[0.2em] text-[#b08d48] uppercase font-bold">RESERVATION</span>
