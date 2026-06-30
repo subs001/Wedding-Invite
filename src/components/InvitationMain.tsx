@@ -372,7 +372,7 @@ export default function InvitationMain() {
       {/* Background and particles removed for a completely clean look */}
 
       {/* Primary Content Window */}
-      <main className="flex-1 flex flex-col max-w-4xl mx-auto w-full px-4 pt-6 pb-[40vh] md:pt-12 md:pb-[50vh] z-10 gap-[20vh] md:gap-16" id="main-ceremony-renderer">
+      <main className="flex-1 flex flex-col max-w-4xl mx-auto w-full px-4 pt-6 pb-[10vh] md:pt-12 md:pb-[15vh] z-10 gap-[20vh] md:gap-16" id="main-ceremony-renderer">
         {/* Section 1: Welcome Cover / Invitation Card Overview */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -717,7 +717,7 @@ export default function InvitationMain() {
                   whileHover={{ scale: rsvpEmail ? 1.02 : 1 }}
                   whileTap={{ scale: rsvpEmail ? 0.98 : 1 }}
                   type="submit"
-                  className="w-full py-3 bg-gradient-to-r from-[#b08d48] to-[#c5a059] hover:from-[#c5a059] hover:to-[#b08d48] transition-all text-white rounded-xl text-xs font-sans tracking-[0.2em] font-bold focus:outline-none flex items-center justify-center space-x-2 shadow-md cursor-pointer uppercase font-semibold"
+                  className="w-full mt-10 sm:mt-8 py-3 bg-gradient-to-r from-[#b08d48] to-[#c5a059] hover:from-[#c5a059] hover:to-[#b08d48] transition-all text-white rounded-xl text-xs font-sans tracking-[0.2em] font-bold focus:outline-none flex items-center justify-center space-x-2 shadow-md cursor-pointer uppercase font-semibold"
                 >
                   <span>Send RSVP via Email ✉️</span>
                 </motion.button>
