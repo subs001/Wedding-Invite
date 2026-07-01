@@ -18,7 +18,7 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
     date: "August 30, 2026",
     time: "10:00 AM Onwards",
     venue: "Poolside Lawn, Muhurat Resort",
-    description: "Apply turmeric all over the Bride and Groom, for 'purification' of course. Jump into the pool afterwards for extra effect!",
+    description: "Get yellow, don't stay mellow, and jump into the pool like a couple of fun fellows",
     themeColor: "from-amber-100 via-amber-200/40 to-yellow-50",
     image: haldiImg,
     details: [
