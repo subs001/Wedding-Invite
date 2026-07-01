@@ -457,7 +457,16 @@ export default function InvitationMain() {
                   id="calendar-add-btn"
                 >
                   <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-[#f1d092] mb-1 group-hover:scale-110 transition-transform" />
-                  <span className="font-serif text-[10px] sm:text-xs md:text-sm text-[#eae2ca] font-bold group-hover:text-[#f3cd85] transition-colors line-clamp-1">{WEDDING_DATES} ↗</span>
+                  <span className="font-serif text-[9px] xs:text-xs md:text-sm text-[#eae2ca] font-bold group-hover:text-[#f3cd85] transition-colors line-clamp-1 flex items-center justify-center">
+                    {WEDDING_DATES}
+                    <motion.span
+                      className="inline-block ml-0.5 text-[#f1d092] font-sans relative -left-[1px]"
+                      animate={{ x: [0, 1.5, 0], y: [0, -1.5, 0] }}
+                      transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
+                    >
+                      ↗
+                    </motion.span>
+                  </span>
                 </button>
 
                 {showCalendarMenu && (
@@ -509,7 +518,16 @@ export default function InvitationMain() {
                   id="venue-link-map"
                 >
                   <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#f1d092] mb-1 group-hover:scale-110 transition-transform" />
-                  <span className="font-serif text-[10px] sm:text-xs md:text-sm text-[#eae2ca] font-bold group-hover:text-[#f3cd85] transition-colors line-clamp-1">{VENUE_NAME} ↗</span>
+                  <span className="font-serif text-[9px] xs:text-xs md:text-sm text-[#eae2ca] font-bold group-hover:text-[#f3cd85] transition-colors line-clamp-1 flex items-center justify-center">
+                    {VENUE_NAME}
+                    <motion.span
+                      className="inline-block ml-0.5 text-[#f1d092] font-sans relative -left-[1px]"
+                      animate={{ x: [0, 1.5, 0], y: [0, -1.5, 0] }}
+                      transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
+                    >
+                      ↗
+                    </motion.span>
+                  </span>
                   <span className="text-[8px] sm:text-[9px] text-[#eae2ca]/70 font-semibold line-clamp-1">{VENUE_LOCATION}</span>
                 </a>
               </div>
