@@ -105,7 +105,19 @@ export default function InvitationMain() {
       }
       
       if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "center" });
+        const isMobile = window.innerWidth < 768;
+        if (isMobile) {
+          // On mobile, scroll further down so the card header aligns beautifully near the top of the viewport
+          const elementRect = element.getBoundingClientRect();
+          const absoluteTop = window.scrollY + elementRect.top;
+          const targetY = Math.max(0, absoluteTop - 40);
+          window.scrollTo({
+            top: targetY,
+            behavior: "smooth"
+          });
+        } else {
+          element.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
       }
       
       setTimeout(() => {
@@ -395,7 +407,7 @@ export default function InvitationMain() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
           id="cover-card-view"
-          className="bg-[#540b17] rounded-3xl py-8 px-4 sm:py-10 sm:px-6 md:py-12 md:px-8 text-center text-[#eae2ca] relative overflow-hidden shadow-xl flex flex-col items-center justify-between min-h-[75vh] md:min-h-[580px]"
+          className="bg-[#330506] rounded-3xl py-8 px-4 sm:py-10 sm:px-6 md:py-12 md:px-8 text-center text-[#eae2ca] relative overflow-hidden shadow-xl flex flex-col items-center justify-between min-h-[75vh] md:min-h-[580px]"
           style={{
             backgroundImage: `linear-gradient(rgba(84, 11, 23, 0.6), rgba(84, 11, 23, 0.6)), url(${maroonWeddingBg})`,
             backgroundSize: "100%",
@@ -448,24 +460,26 @@ export default function InvitationMain() {
 
           {/* Section 3: Event Details (Similar visual footprint to Section 1) */}
           <div className="w-full max-w-lg z-20 py-1 sm:py-2 px-2 sm:px-4">
-            <div className="grid grid-cols-2 text-center items-stretch w-full">
-              <div className="relative flex flex-col items-center justify-center px-1">
+            <div className="grid grid-cols-2 gap-3.5 text-center items-stretch w-full">
+              <div className="relative flex flex-col items-center justify-center">
                 <button
                   onClick={() => setShowCalendarMenu(!showCalendarMenu)}
-                  className="flex flex-col items-center justify-center hover:bg-[#c5a059]/10 p-1.5 sm:p-2 rounded-xl transition-all cursor-pointer group w-full"
+                  className="flex flex-col items-center justify-center bg-[#420912]/85 border border-[#c5a059]/30 rounded-2xl p-2.5 sm:p-3 shadow-[0_4px_12px_rgba(0,0,0,0.5)] backdrop-blur-sm hover:bg-[#520d18] hover:border-[#f1d092]/60 hover:shadow-[0_6px_16px_rgba(0,0,0,0.6)] active:translate-y-0.5 transition-all cursor-pointer group w-full h-full"
                   title="Add to Google Calendar"
                   id="calendar-add-btn"
                 >
-                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-[#f1d092] mb-1 group-hover:scale-110 transition-transform" />
+                  <motion.div
+                    animate={{ y: [0, -4, 0] }}
+                    transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
+                    className="mb-1"
+                  >
+                    <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-[#f1d092] group-hover:scale-110 transition-transform" />
+                  </motion.div>
                   <span className="font-serif text-[9px] xs:text-xs md:text-sm text-[#eae2ca] font-bold group-hover:text-[#f3cd85] transition-colors line-clamp-1 flex items-center justify-center">
                     {WEDDING_DATES}
-                    <motion.span
-                      className="inline-block ml-0.5 text-[#f1d092] font-sans relative -left-[1px]"
-                      animate={{ x: [0, 1.5, 0], y: [0, -1.5, 0] }}
-                      transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
-                    >
+                    <span className="inline-block ml-0.5 text-[#f1d092] font-sans relative -left-[1px]">
                       ↗
-                    </motion.span>
+                    </span>
                   </span>
                 </button>
 
@@ -508,25 +522,27 @@ export default function InvitationMain() {
                 )}
               </div>
               
-              <div className="px-1 flex flex-col items-center justify-center">
+              <div className="flex flex-col items-center justify-center">
                 <a
                   href="https://maps.app.goo.gl/bkb4YwJYpZXz6XaE8"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center hover:bg-[#c5a059]/10 p-1.5 sm:p-2 rounded-xl transition-all cursor-pointer group w-full"
+                  className="flex flex-col items-center justify-center bg-[#420912]/85 border border-[#c5a059]/30 rounded-2xl p-2.5 sm:p-3 shadow-[0_4px_12px_rgba(0,0,0,0.5)] backdrop-blur-sm hover:bg-[#520d18] hover:border-[#f1d092]/60 hover:shadow-[0_6px_16px_rgba(0,0,0,0.6)] active:translate-y-0.5 transition-all cursor-pointer group w-full h-full"
                   title="Open in Google Maps"
                   id="venue-link-map"
                 >
-                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#f1d092] mb-1 group-hover:scale-110 transition-transform" />
+                  <motion.div
+                    animate={{ y: [0, -4, 0] }}
+                    transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut", delay: 0.3 }}
+                    className="mb-1"
+                  >
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#f1d092] group-hover:scale-110 transition-transform" />
+                  </motion.div>
                   <span className="font-serif text-[9px] xs:text-xs md:text-sm text-[#eae2ca] font-bold group-hover:text-[#f3cd85] transition-colors line-clamp-1 flex items-center justify-center">
                     {VENUE_NAME}
-                    <motion.span
-                      className="inline-block ml-0.5 text-[#f1d092] font-sans relative -left-[1px]"
-                      animate={{ x: [0, 1.5, 0], y: [0, -1.5, 0] }}
-                      transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
-                    >
+                    <span className="inline-block ml-0.5 text-[#f1d092] font-sans relative -left-[1px]">
                       ↗
-                    </motion.span>
+                    </span>
                   </span>
                   <span className="text-[8px] sm:text-[9px] text-[#eae2ca]/70 font-semibold line-clamp-1">{VENUE_LOCATION}</span>
                 </a>
