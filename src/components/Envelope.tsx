@@ -205,12 +205,13 @@ export default function Envelope(props: EnvelopeProps) {
 </div>
 
         {/* Elegant footer indicator */}
-        <div className="absolute bottom-5 inset-x-0 text-center z-10 pointer-events-none">
+        <div className="absolute bottom-1 sm:bottom-1.5 inset-x-0 text-center z-10 pointer-events-none">
           <motion.p
-            animate={isClicked ? { opacity: 0 } : { opacity: [0.4, 0.7, 0.4] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-            className="text-[10px] text-stone-400 font-sans tracking-[0.2em] uppercase font-bold"
+            animate={isClicked ? { opacity: 0, scale: 0.8 } : { opacity: [0.8, 1, 0.8], scale: [0.93, 1.07, 0.93] }}
+            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+            className="text-[11px] sm:text-xs text-[#c5a059] font-sans font-light tracking-wider drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"
           >
+            Click on the seal to open the envelope
           </motion.p>
         </div>
       </motion.div>

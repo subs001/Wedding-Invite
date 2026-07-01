@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
 import { 
   Heart, Calendar, MapPin, Music, Volume2, VolumeX, 
-  ChevronRight, ChevronLeft, Bell, Sparkles, Star, Flame, MailOpen
+  ChevronRight, ChevronLeft, Bell, Sparkles, Star, Flame, MailOpen,
+  ChevronDown
 } from "lucide-react";
 import { 
   BRIDE_NAME, GROOM_NAME, VENUE_NAME, VENUE_LOCATION, 
@@ -394,7 +395,7 @@ export default function InvitationMain() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
           id="cover-card-view"
-          className="bg-[#540b17] rounded-3xl py-8 px-4 sm:py-10 sm:px-6 md:py-12 md:px-8 text-center text-[#eae2ca] relative overflow-hidden shadow-xl flex flex-col items-center justify-between min-h-[75vh] md:min-h-[580px] max-h-[90vh]"
+          className="bg-[#540b17] rounded-3xl py-8 px-4 sm:py-10 sm:px-6 md:py-12 md:px-8 text-center text-[#eae2ca] relative overflow-hidden shadow-xl flex flex-col items-center justify-between min-h-[75vh] md:min-h-[580px]"
           style={{
             backgroundImage: `linear-gradient(rgba(84, 11, 23, 0.6), rgba(84, 11, 23, 0.6)), url(${maroonWeddingBg})`,
             backgroundSize: "100%",
@@ -530,9 +531,18 @@ export default function InvitationMain() {
             <CountdownTimer />
           </div>
 
-          <p className="text-[10px] tracking-[0.3em] text-[#c5a059] font-sans mt-1 font-semibold select-none">
-            ✦ ✦ ✦
-          </p>
+          {/* Bouncy Arrow to Next Page (Day 1) */}
+          <div className="flex flex-col items-center cursor-pointer mt-4 z-20 group" onClick={() => handleTabChange(0)}>
+            <span className="text-[9px] tracking-[0.2em] text-[#eae2ca]/80 uppercase group-hover:text-[#f1d092] transition-colors font-bold mb-1">
+              View Day 1 Itinerary
+            </span>
+            <motion.div
+              animate={{ y: [0, 6, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+            >
+              <ChevronDown className="w-5 h-5 text-[#f1d092] group-hover:scale-110 transition-transform" />
+            </motion.div>
+          </div>
         </motion.div>
 
         {/* Section 2: Scrollable Itinerary list showing all events sequentially */}
@@ -596,6 +606,18 @@ export default function InvitationMain() {
                 ))}
               </div>
 
+              {/* Bouncy Arrow to Next Page (Day 2) */}
+              <div className="flex flex-col items-center justify-center cursor-pointer mt-10 pt-4 border-t border-stone-100 z-10 group animate-none" onClick={() => handleTabChange(1)}>
+                <span className="text-[10px] tracking-[0.2em] text-[#b08d48] uppercase font-bold group-hover:text-[#c5a059] transition-colors mb-1">
+                  View Day 2 Events
+                </span>
+                <motion.div
+                  animate={{ y: [0, 6, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+                >
+                  <ChevronDown className="w-5 h-5 text-[#b08d48] group-hover:scale-110 transition-transform" />
+                </motion.div>
+              </div>
 
             </div>
           </ScrollLeftToRightSection>
@@ -658,6 +680,18 @@ export default function InvitationMain() {
                 ))}
               </div>
 
+              {/* Bouncy Arrow to Next Page (RSVP) */}
+              <div className="flex flex-col items-center justify-center cursor-pointer mt-10 pt-4 border-t border-stone-100 z-10 group animate-none" onClick={() => handleTabChange(2)}>
+                <span className="text-[10px] tracking-[0.2em] text-[#b08d48] uppercase font-bold group-hover:text-[#c5a059] transition-colors mb-1">
+                  Go to RSVP
+                </span>
+                <motion.div
+                  animate={{ y: [0, 6, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+                >
+                  <ChevronDown className="w-5 h-5 text-[#b08d48] group-hover:scale-110 transition-transform" />
+                </motion.div>
+              </div>
 
             </div>
           </ScrollLeftToRightSection>
