@@ -16,7 +16,7 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
     id: "haldi",
     title: "Haldi Ceremony",
     date: "August 30, 2026",
-    time: "10:00 AM Onwards",
+    time: "8:30 AM Onwards",
     venue: "Poolside Lawn, Muhurat Resort",
     description: "Get yellow, don't stay mellow, and jump into the pool like a couple of fun fellows",
     themeColor: "from-amber-100 via-amber-200/40 to-yellow-50",
